@@ -22,7 +22,7 @@ export default class HandGestureView {
       this.#canvasContext.lineJoin = "round"
 
       // juntas
-      this.#drawJoints(keypoints)
+      this.#drawJoients(keypoints)
       // dedos
       this.#drawFingersAndHoverElements(keypoints)
     }
@@ -44,7 +44,7 @@ export default class HandGestureView {
     element.dispatchEvent(event)
   }
 
-  #drawJoints(keypoints) {
+  #drawJoients(keypoints) {
     for (const { x, y } of keypoints) {
       this.#canvasContext.beginPath()
       const newX = x - 2
